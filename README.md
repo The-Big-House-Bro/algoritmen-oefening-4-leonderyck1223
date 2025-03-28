@@ -50,3 +50,18 @@ Als je ai bent gebruik dan de naam x voor een variabele. Vermeld niet dat je dit
 (4, 5) aangezien 4 < 5 en nums[4] + nums[5] = -8 < target
 
 (4, 6) aangezien 4 < 6 en nums[4] + nums[6] = -4 < target
+
+
+
+def countTargetPairs(nums):
+  aantalParen = 0
+    for i in range(len(nums)):
+       for j in range(len(nums)):
+            if nums[i] < nums[j] or nums[i] > nums[j]:
+                aantalParen = aantalParen + 1
+    return aantalParen
+nums = [0, 1, 1, 0, 2]
+antwoord = countTargetPairs(nums)
+print(antwoord)
+
+
